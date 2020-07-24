@@ -24,14 +24,12 @@ def get_japanese_emoticon(file, w_emot)
   return "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning(file, jemot)
+def get_english_meaning(file, jap_emot)
   data = load_library(file)
   
   data.each do |key, value|
-    if jemot == data[key][value][:japanese]
-      
-      return key
-    end
+    
+    binding.pry
   end
   return "Sorry, that emoticon was not found"
 end
